@@ -3,6 +3,7 @@ const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('nav a');
 const destinations = document.querySelector('.content-pick');
 const images = document.querySelectorAll('img');
+const paraText = document.querySelectorAll('p');
 
 // const testLink = document.querySelector('nav a:nth-child(1)');
 
@@ -48,10 +49,12 @@ Array.from(images).forEach((image) => {
 		image.classList.add('img-shadow');
 	});
 
+	// Double-click event changes border radius
 	image.addEventListener('dblclick', () => {
 		image.classList.add('img-dbl-click');
 	});
 
+	// Single-click resets border radius to original
 	image.addEventListener('click', () => {
 		image.classList.remove('img-dbl-click');
 	});
@@ -70,4 +73,8 @@ window.addEventListener('resize', () => {
     Window Height: ${window.innerHeight}
     Window Width: ${window.innerWidth}
   `);
+});
+
+window.addEventListener('load', (e) => {
+	console.log('Page has fully loaded');
 });
