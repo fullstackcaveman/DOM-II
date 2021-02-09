@@ -75,6 +75,8 @@ window.addEventListener('resize', () => {
   `);
 });
 
+// Console.log load status
 window.addEventListener('load', (e) => {
+	alert('Welcome to Fun Bus!');
 	console.log('Page has fully loaded');
 });
