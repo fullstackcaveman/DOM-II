@@ -56,3 +56,11 @@ Array.from(images).forEach((image) => {
 		image.classList.remove('img-shadow');
 	});
 });
+
+// Console.log widow size when resizing
+window.addEventListener('resize', () => {
+	console.log(`
+    Window Height: ${window.innerHeight}
+    Window Width: ${window.innerWidth}
+  `);
+});
