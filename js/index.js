@@ -14,7 +14,6 @@ const images = document.querySelectorAll('img');
 Array.from(navLinks).forEach((link) => {
 	link.addEventListener('click', (e) => {
 		e.preventDefault();
-		console.log(e.type);
 	});
 });
 
@@ -48,6 +47,14 @@ Array.from(images).forEach((image) => {
 	image.addEventListener('mouseover', () => {
 		image.classList.add('img-shadow');
 	});
+
+	image.addEventListener('dblclick', () => {
+		image.classList.add('img-dbl-click');
+	});
+
+	image.addEventListener('click', () => {
+		image.classList.remove('img-dbl-click');
+	});
 });
 
 // // Add mouseleave to images
@@ -57,7 +64,7 @@ Array.from(images).forEach((image) => {
 	});
 });
 
-// Console.log widow size when resizing
+// Console.log window size when resizing
 window.addEventListener('resize', () => {
 	console.log(`
     Window Height: ${window.innerHeight}
