@@ -15,6 +15,7 @@ const subscribeInput = document.querySelector('input');
 Array.from(navLinks).forEach((link) => {
 	link.addEventListener('click', (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 	});
 });
 
@@ -90,6 +91,7 @@ subscribeBtn.addEventListener('click', (e) => {
 	subscribeBtn.style.fontSize = '1.3rem';
 	subscribeInput.value = '';
 	alert('Thanks for subscribing!');
+	e.stopPropagation();
 });
 
 subscribeInput.addEventListener('focus', () => {
