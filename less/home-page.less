@@ -124,4 +124,41 @@
 			}
 		}
 	}
+
+	.subscribe-form {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+
+		form {
+			margin: 20px auto;
+
+			input {
+				height: 30px;
+				width: 305px;
+				padding: 5px;
+				margin-right: 5px;
+				border-radius: 5px;
+				border: 2px solid grey;
+
+				&:focus::placeholder {
+					color: transparent;
+				}
+
+				&.focus {
+					border: 2px solid #f34546;
+				}
+			}
+
+			button {
+				height: 30px;
+				padding: 0 20px;
+				border: none;
+				border-radius: 5px;
+				background: #f34546;
+				color: @white;
+			}
+		}
+	}
 } // home

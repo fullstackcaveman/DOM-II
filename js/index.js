@@ -1,9 +1,9 @@
 // Your code goes here
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('nav a');
-const destinations = document.querySelector('.content-pick');
 const images = document.querySelectorAll('img');
-const paraText = document.querySelectorAll('p');
+const subscribeBtn = document.querySelector('button');
+const subscribeInput = document.querySelector('input');
 
 // const testLink = document.querySelector('nav a:nth-child(1)');
 
@@ -76,7 +76,33 @@ window.addEventListener('resize', () => {
 });
 
 // Console.log load status
-window.addEventListener('load', (e) => {
-	alert('Welcome to Fun Bus!');
+window.addEventListener('load', () => {
+	// alert('Welcome to Fun Bus!');
 	console.log('Page has fully loaded');
+});
+
+subscribeBtn.addEventListener('click', (e) => {
+	e.preventDefault();
+	subscribeBtn.style.outline = 'none';
+	subscribeBtn.style.background = 'rgba(243, 69, 70, 0.7)';
+	subscribeBtn.style.fontSize = '.8rem';
+	subscribeBtn.style.background = 'rgba(243, 69, 70)';
+	subscribeBtn.style.fontSize = '1.3rem';
+	subscribeInput.value = '';
+	alert('Thanks for subscribing!');
+});
+
+subscribeInput.addEventListener('focus', () => {
+	subscribeInput.classList.add('focus');
+});
+
+subscribeInput.addEventListener('keydown', () => {
+	subscribeInput.style.backgroundColor = '#f34546';
+	subscribeInput.style.color = '#fff';
+});
+
+subscribeInput.addEventListener('blur', () => {
+	subscribeInput.classList.remove('focus');
+	subscribeInput.style.backgroundColor = '#fff';
+	subscribeInput.style.color = 'black';
 });
